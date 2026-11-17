@@ -1,0 +1,39 @@
+<script>
+let notas = [];
+let soma = 0;
+let aprovados = 0;
+let reprovados = 0;
+
+for (let i = 0; i < 10; i++) {
+    let entrada = prompt("Digite a nota do aluno " + (i + 1) + " de 10:");
+    notas[i] = parseFloat(entrada.replace(",", "."));
+    soma = soma + notas[i];
+}
+
+let media = soma / 10;
+
+for (let i = 0; i < 10; i++) {
+    if (notas[i] >= 6) {
+        aprovados = aprovados + 1;
+    } else {
+        reprovados = reprovados + 1;
+    }
+}
+
+document.write("<h2>Controle de notas da turma</h2>");
+
+document.write("<h3>Notas armazenadas</h3>");
+for (let i = 0; i < 10; i++) {
+    document.write("Aluno " + (i + 1) + ": " + notas[i] + "<br>");
+}
+
+document.write("<h3>Resultado da turma</h3>");
+document.write("Média geral da turma: " + media.toFixed(2) + "<br>");
+document.write("Alunos aprovados (nota maior ou igual a 6): " + aprovados + "<br>");
+document.write("Alunos reprovados (nota menor que 6): " + reprovados + "<br>");
+
+alert("Média geral da turma: " + media.toFixed(2));
+alert("Alunos aprovados: " + aprovados);
+alert("Alunos reprovados: " + reprovados);
+</script>
+</script>

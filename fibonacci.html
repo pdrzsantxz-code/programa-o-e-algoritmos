@@ -1,0 +1,12 @@
+<script>
+    let n = parseInt(prompt("Digite o número de termos:"));
+let anterior = 0;
+let atual = 1;
+
+for (let i = 1; i <= n; i++) {
+  document.write(atual + "<br>");
+  let prox = atual + anterior;
+  anterior = atual;
+  atual = prox;
+}
+</script>

@@ -1,0 +1,24 @@
+<script>
+let vetorA = [];
+let vetorB = [];
+let vetorC = [];
+
+for (let i = 0; i < 5; i++) {
+    vetorA[i] = parseFloat(prompt("Vetor A - digite o numero " + (i + 1) + " de 5:"));
+}
+
+for (let i = 0; i < 5; i++) {
+    vetorB[i] = parseFloat(prompt("Vetor B - digite o numero " + (i + 1) + " de 5:"));
+}
+
+for (let i = 0; i < 5; i++) {
+    vetorC[i] = vetorA[i] + vetorB[i];
+}
+
+document.write("<table border='1' cellpadding='6'>");
+document.write("<tr><th>Vetor A</th><th>Vetor B</th><th>Vetor C (A + B)</th></tr>");
+for (let i = 0; i < 5; i++) {
+    document.write("<tr><td>" + vetorA[i] + "</td><td>" + vetorB[i] + "</td><td>" + vetorC[i] + "</td></tr>");
+}
+document.write("</table>");
+</script>

@@ -1,0 +1,23 @@
+<script>
+let numeros = [];
+
+for (let i = 0; i < 10; i++) {
+    numeros[i] = parseInt(prompt("Digite o numero inteiro " + (i + 1) + " de 10:"));
+}
+
+for (let i = 0; i < 9; i++) {
+    for (let j = 0; j < 9 - i; j++) {
+        if (numeros[j] > numeros[j + 1]) {
+            let auxiliar = numeros[j];
+            numeros[j] = numeros[j + 1];
+            numeros[j + 1] = auxiliar;
+        }
+    }
+}
+
+let resultado = "Números em ordem crescente:\n";
+for (let i = 0; i < 10; i++) {
+    resultado = resultado + numeros[i] + "\n";
+}
+alert(resultado);
+</script>
